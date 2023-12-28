@@ -10,17 +10,17 @@
             margin: 0;
             padding: 0;
             background-color: #FFFFFF; /* White background */
-            color: #121212; /* Off black text color */
+            color: #121212; /* Off black text */
         }
         .header {
-            background-color: #121212; /* Off black background for the header */
-            color: #FFFFFF; /* White text color */
+            background-color: #121212; /* Off black header */
+            color: #FFFFFF; /* White text */
             padding: 20px;
             text-align: center;
         }
         .subtitle {
-            color: #005EB8; /* Nevo Blue for the subtitle text */
-            background: linear-gradient(to right, #005EB8, #4ED3C8); /* Nevo Gradient background */
+            background: linear-gradient(to right, #005EB8, #4ED3C8); /* Nevo Gradient */
+            color: #FFFFFF; /* White text */
             padding: 10px;
             text-align: center;
             font-size: 1.2em;
@@ -30,25 +30,28 @@
             padding: 20px;
             text-align: left;
             background-color: #424242; /* Mid Gray background */
-            color: #FFFFFF; /* White text color for contrast */
+            color: #FFFFFF; /* White text */
             margin: 20px auto;
             max-width: 960px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             font-size: 0.95em;
         }
+        .description ul {
+            list-style: none;
+            padding: 0;
+        }
         .description ul li::before {
             content: '•';
-            color: #ED613E; /* Tide Heat for bullet points */
+            color: #EE3943; /* UEI Swoosh red for bullet points */
             font-weight: bold;
             display: inline-block; 
             width: 1em;
             margin-left: -1em;
         }
         .image-container {
-            text-align: center;
             padding: 20px;
-            background-color: #121212; /* Off black background for images */
+            background-color: #121212; /* Off black background for the images */
         }
         img {
             width: 100%;
@@ -57,14 +60,14 @@
             border-radius: 4px;
         }
         .footer {
-            background-color: #121212;
-            color: #FFFFFF;
+            background-color: #5C21B8; /* UEI Purple footer */
+            color: #FFFFFF; /* White text */
             text-align: center;
             padding: 10px 20px;
             font-size: 0.8em;
         }
-        .footer a, .description a {
-            color: #EE3943; /* UEI Swoosh red for links */
+        .footer a {
+            color: #005EB8; /* Nevo Blue for links */
             text-decoration: none;
         }
     </style>
@@ -83,4 +86,22 @@
         <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover">
         <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
         <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
-        <img src="
+        <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
+    </div>
+
+    <div class="description">
+        <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
+        <ul>
+            <li>Tide Family of Smart Thermostats</li>
+            <li>Aspen Family of Zigbee Sensors</li>
+            <li>OFA Smart Control Pro (URC 7966)</li>
+            <li>OFA Smart Streamer (URC 7945)</li>
+            <li>Eterna - Xtreme Low Power Bluetooth LE Remote</li>
+            <li>Eterna XLR - Energy Harvesting Remote</li>
+            <li>Nevo Butler Entertainment Companion</li>
+            <li>Butler Family of Smart Home hubs</li>
+        </ul>
+        <p>More to come soon…</p>
+        <p>Powered by <a href="https://nevo.ai">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com">QuickSet Cloud</a>.</p>
+    </div>
+
