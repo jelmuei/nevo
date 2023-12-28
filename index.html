@@ -1,131 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nevo Smart Home Assistant</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background-color: #121212;
-            color: #FFFFFF;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        header img {
-            max-width: 200px;
-        }
-
-        .subtitle {
-            background: linear-gradient(to right, #005EB8, #4ED3C8);
-            color: #FFFFFF;
-            padding: 0.75em 0;
-            text-align: center;
-            font-size: 1.2em;
-            width: 100%;
-            display: block;
-        }
-
-        .carousel {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            height: 100vh; /* Set the height to be full viewport height */
-            max-height: -webkit-fill-available;
-        }
-
-        .carousel img {
-            max-width: 100%;
-            max-height: 100vh; /* Make image max height of the viewport */
-            object-fit: contain;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            position: absolute;
-        }
-
-        .carousel img.active {
-            opacity: 1;
-            position: relative;
-        }
-
-        .description {
-            background-color: #424242;
-            color: #FFFFFF;
-            padding: 2em;
-            border-radius: 10px;
-            margin: 2em auto;
-            max-width: 960px;
-        }
-
-        .footer {
-            background-color: #000000;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 1em 0;
-            font-size: 0.8em;
-        }
-
-        .footer a {
-            color: #4ED3C8;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Home Assistant</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+  .header { background: #000; color: #fff; padding: 20px; text-align: center; }
+  .main-title { color: #1a73e8; }
+  .subtitle { color: #fff; }
+  .content { margin: 20px; }
+  .responsive-img { width: 100%; height: auto; }
+  .section { margin-bottom: 40px; }
+  .footer { background: #000; color: #fff; text-align: center; padding: 10px; }
+  @media (max-width: 600px) {
+    .header, .footer { padding: 10px; }
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <img src="https://jelmuei.github.io/nevo/nevologo.svg" alt="Nevo Logo">
-    </header>
+<div class="header">
+  <img src="nevologo.svg" alt="Nevo Logo" />
+  <h1 class="main-title">Smart Home Assistant</h1>
+  <h2 class="subtitle">I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.</h2>
+</div>
 
-    <div class="subtitle">
-        I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.
-    </div>
+<div class="content">
+  <div class="section">
+    <img src="Discover.png" alt="Discover" class="responsive-img">
+  </div>
+  <div class="section">
+    <img src="Configure.png" alt="Configure" class="responsive-img">
+  </div>
+  <div class="section">
+    <img src="Personalize.png" alt="Personalize" class="responsive-img">
+  </div>
+  <div class="section">
+    <img src="Interact.png" alt="Interact" class="responsive-img">
+  </div>
+  
+  <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
+  <ul>
+    <li>Tide Family of Smart Thermostats</li>
+    <li>Aspen Family of Zigbee Sensors</li>
+    <li>OFA Smart Control Pro</li>
+    <li>OFA Smart Streamer</li>
+    <li>Eterna Xtreme Low Power Bluetooth LE Remote</li>
+    <li>Eterna XLR</li>
+    <li>Energy Harvesting Remote</li>
+    <li>Nevo Butler Entertainment Companion</li>
+    <li>Butler Family of Smart Home hubs</li>
+    <li>More to come soon…</li>
+  </ul>
+  
+  <p>Powered by <a href="https://nevo.ai" target="_blank">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com" target="_blank">QuickSet Cloud</a>. Learn more: <a href="https://quicksetcloud.com" target="_blank">quicksetcloud.com</a></p>
+</div>
 
-    <div class="carousel" id="carousel">
-        <!-- Carousel Images -->
-        <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover" class="active">
-        <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
-        <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
-        <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
-    </div>
+<div class="footer">
+  Learn more at <a href="https://quicksetcloud.com" target="_blank">quicksetcloud.com</a>
+</div>
 
-    <div class="description">
-        <!-- Description Content -->
-        <h2>Empower Your Home</h2>
-        <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
-        <!-- List of supported devices -->
-        <p>More to come soon…</p>
-        <p>Powered by <a href="https://nevo.ai">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com">QuickSet Cloud</a>.</p>
-    </div>
+</body>
+</html>
 
-    <div class="footer">
-        <p>Learn more at <a href="https://quicksetcloud.com">quicksetcloud.com</a>.</p>
-    </div>
-
-    <script>
-        const carouselImages = document.querySelectorAll('#carousel img');
-        let currentImageIndex = 0;
-
-        function cycleImages() {
-            carouselImages[currentImageIndex].classList.remove('active');
-            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
-            carouselImages[currentImageIndex].classList.add('active');
-        }
-
-        setInterval(cycleImages, 3000);
-    </script>
-</body
