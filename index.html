@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Home Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,10 +14,38 @@
             color: #121212; /* Off black text */
         }
         .header {
-            background-color: #121212; /* Off black header */
-            color: #FFFFFF; /* White text */
             padding: 20px;
             text-align: center;
+        }
+        .header img {
+            max-width: 300px; /* Adjust the size as needed */
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        .carousel img {
+            max-width: 100%;
+            display: block;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .carousel img.active {
+            opacity: 1;
+        }
+        .carousel-controls {
+            text-align: center;
+            padding: 10px;
+        }
+        .carousel-controls button {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            margin: 0 10px;
+            cursor: pointer;
+            color: #005EB8; /* Nevo Blue for buttons */
         }
         .subtitle {
             background: linear-gradient(to right, #005EB8, #4ED3C8); /* Nevo Gradient */
@@ -49,21 +78,11 @@
             width: 1em;
             margin-left: -1em;
         }
-        .image-container {
-            padding: 20px;
-            background-color: #121212; /* Off black background for the images */
-        }
-        img {
-            width: 100%;
-            max-width: 250px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
         .footer {
-            background-color: #5C21B8; /* UEI Purple footer */
-            color: #FFFFFF; /* White text */
+            background-color: #121212; /* Off black footer */
+            color: #fff;
             text-align: center;
-            padding: 10px 20px;
+            padding: 20px;
             font-size: 0.8em;
         }
         .footer a {
@@ -75,33 +94,28 @@
 <body>
 
     <div class="header">
-        <h1>Smart Home Assistant</h1>
+        <!-- Replace 'path-to-your-logo.svg' with the actual path to your logo -->
+        <img src="path-to-your-logo.svg" alt="Nevo Logo">
     </div>
 
     <div class="subtitle">
         <p>I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.</p>
     </div>
 
-    <div class="image-container">
-        <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover">
+    <div class="carousel" id="imageCarousel">
+        <!-- Carousel Images -->
+        <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover" class="active">
         <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
         <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
         <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
     </div>
 
-    <div class="description">
-        <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
-        <ul>
-            <li>Tide Family of Smart Thermostats</li>
-            <li>Aspen Family of Zigbee Sensors</li>
-            <li>OFA Smart Control Pro (URC 7966)</li>
-            <li>OFA Smart Streamer (URC 7945)</li>
-            <li>Eterna - Xtreme Low Power Bluetooth LE Remote</li>
-            <li>Eterna XLR - Energy Harvesting Remote</li>
-            <li>Nevo Butler Entertainment Companion</li>
-            <li>Butler Family of Smart Home hubs</li>
-        </ul>
-        <p>More to come soon…</p>
-        <p>Powered by <a href="https://nevo.ai">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com">QuickSet Cloud</a>.</p>
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+        <button onclick="previousImage()"><i class="fas fa-chevron-left"></i></button>
+        <button onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
     </div>
 
+    <div class="description">
+        <!-- Description Content -->
+        <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of
