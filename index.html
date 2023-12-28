@@ -2,120 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Assistant</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Nevo Smart Home Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF; /* White background */
-            color: #121212; /* Off black text */
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
         }
-        .header {
-            padding: 20px;
+
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 50px;
+        }
+
+        header {
             text-align: center;
+            padding: 2em 0;
         }
-        .header img {
-            max-width: 300px; /* Adjust the size as needed */
+
+        header img {
+            max-width: 200px;
         }
+
+        .subtitle {
+            font-size: 1.1rem;
+            background-color: #005EB8;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
         .carousel {
             display: flex;
-            overflow: hidden;
-            margin-top: 30px;
+            margin-bottom: 2em;
             justify-content: center;
+            position: relative;
         }
+
         .carousel img {
             max-width: 100%;
             display: block;
-            opacity: 0;
-            transition: opacity 1s ease;
+            transition: transform 0.5s ease;
         }
+
+        .carousel img:not(:first-child) {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
         .carousel img.active {
             opacity: 1;
         }
-        .carousel-controls {
-            text-align: center;
-            padding: 10px;
-        }
-        .carousel-controls button {
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            margin: 0 10px;
-            cursor: pointer;
-            color: #005EB8; /* Nevo Blue for buttons */
-        }
-        .subtitle {
-            background: linear-gradient(to right, #005EB8, #4ED3C8); /* Nevo Gradient */
-            color: #FFFFFF; /* White text */
-            padding: 10px;
-            text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
+
         .description {
-            padding: 20px;
-            text-align: left;
-            background-color: #424242; /* Mid Gray background */
-            color: #FFFFFF; /* White text */
-            margin: 20px auto;
-            max-width: 960px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            font-size: 0.95em;
+            background-color: #424242;
+            color: #fff;
+            padding: 2em;
+            border-radius: 10px;
+            margin-bottom: 2em;
         }
-        .description ul {
-            list-style: none;
-            padding: 0;
+
+        .description h2 {
+            margin-bottom: .5em;
+            color: #EE3943;
         }
-        .description ul li::before {
-            content: '•';
-            color: #EE3943; /* UEI Swoosh red for bullet points */
-            font-weight: bold;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -1em;
+
+        .description p {
+            margin-bottom: 1em;
         }
+
+        .description a {
+            color: #4ED3C8;
+            text-decoration: none;
+        }
+
         .footer {
-            background-color: #121212; /* Off black footer */
+            background-color: #000000;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            font-size: 0.8em;
+            padding: 1em 0;
         }
+
         .footer a {
-            color: #005EB8; /* Nevo Blue for links */
+            color: #4ED3C8;
             text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <!-- Replace 'path-to-your-logo.svg' with the actual path to your logo -->
+    <header>
         <img src="https://jelmuei.github.io/nevo/nevologo.svg" alt="Nevo Logo">
+    </header>
+
+    <div class="container">
+        <div class="subtitle">
+            I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.
+        </div>
+
+        <div class="carousel" id="carousel">
+            <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover" class="active">
+            <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
+            <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
+            <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
+        </div>
+
+        <div class="description">
+            <h2>Empower Your Home</h2>
+            <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
+            <ul>
+                <li>Tide Family of Smart Thermostats</li>
+                <li>Aspen Family of Zigbee Sensors</li>
+                <li>OFA Smart Control Pro (URC 7966)</li>
+                <!-- More items here -->
+            </ul>
+            <p>More to come soon…</p>
+            <p>Powered by <a href="https://nevo.ai">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com">QuickSet Cloud</a>.</p>
+        </div>
     </div>
 
-    <div class="subtitle">
-        <p>I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.</p>
+    <div class="footer">
+        <p>Learn more at <a href="https://quicksetcloud.com">quicksetcloud.com</a>.</p>
     </div>
 
-    <div class="carousel" id="imageCarousel">
-        <!-- Carousel Images -->
-        <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover" class="active">
-        <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
-        <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
-        <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
-    </div>
+    <script>
+        const carouselImages = document.querySelectorAll('#carousel img');
+        let currentImageIndex = 0;
 
-    <!-- Carousel Controls -->
-    <div class="carousel-controls">
-        <button onclick="previousImage()"><i class="fas fa-chevron-left"></i></button>
-        <button onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
-    </div>
+        function cycleImages() {
+            carouselImages[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+            carouselImages[currentImageIndex].classList.add('active');
+        }
 
-    <div class="description">
-        <!-- Description Content -->
-        <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of
+        setInterval(cycleImages, 3000);
+    </script>
+</body>
+</html>
