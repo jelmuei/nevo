@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nevo Smart Home Assistant</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <style>
         * {
             margin: 0;
@@ -19,17 +17,12 @@
             background-color: #121212;
             color: #FFFFFF;
             line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 50px;
+            overflow-x: hidden;
         }
 
         header {
             text-align: center;
-            padding: 2em 0;
+            padding: 1em 0;
         }
 
         header img {
@@ -37,64 +30,53 @@
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            background-color: #005EB8;
-            color: #fff;
-            padding: 1em;
+            background: linear-gradient(to right, #005EB8, #4ED3C8);
+            color: #FFFFFF;
+            padding: 0.75em 0;
             text-align: center;
-            margin-bottom: 2em;
+            font-size: 1.2em;
+            width: 100%;
+            display: block;
         }
 
         .carousel {
             display: flex;
-            margin-bottom: 2em;
+            align-items: center;
             justify-content: center;
             position: relative;
+            height: 100vh; /* Set the height to be full viewport height */
+            max-height: -webkit-fill-available;
         }
 
         .carousel img {
             max-width: 100%;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel img:not(:first-child) {
-            position: absolute;
+            max-height: 100vh; /* Make image max height of the viewport */
+            object-fit: contain;
             opacity: 0;
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transition: opacity 0.5s ease;
+            position: absolute;
         }
 
         .carousel img.active {
             opacity: 1;
+            position: relative;
         }
 
         .description {
             background-color: #424242;
-            color: #fff;
+            color: #FFFFFF;
             padding: 2em;
             border-radius: 10px;
-            margin-bottom: 2em;
-        }
-
-        .description h2 {
-            margin-bottom: .5em;
-            color: #EE3943;
-        }
-
-        .description p {
-            margin-bottom: 1em;
-        }
-
-        .description a {
-            color: #4ED3C8;
-            text-decoration: none;
+            margin: 2em auto;
+            max-width: 960px;
         }
 
         .footer {
             background-color: #000000;
-            color: #fff;
+            color: #FFFFFF;
             text-align: center;
             padding: 1em 0;
+            font-size: 0.8em;
         }
 
         .footer a {
@@ -109,30 +91,25 @@
         <img src="https://jelmuei.github.io/nevo/nevologo.svg" alt="Nevo Logo">
     </header>
 
-    <div class="container">
-        <div class="subtitle">
-            I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.
-        </div>
+    <div class="subtitle">
+        I’m Nevo, here to help you discover, configure and interact with a range of smart home devices.
+    </div>
 
-        <div class="carousel" id="carousel">
-            <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover" class="active">
-            <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
-            <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
-            <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
-        </div>
+    <div class="carousel" id="carousel">
+        <!-- Carousel Images -->
+        <img src="https://jelmuei.github.io/nevo/Discover.png" alt="Discover" class="active">
+        <img src="https://jelmuei.github.io/nevo/Configure.png" alt="Configure">
+        <img src="https://jelmuei.github.io/nevo/Personalize.png" alt="Personalize">
+        <img src="https://jelmuei.github.io/nevo/Interact.png" alt="Interact">
+    </div>
 
-        <div class="description">
-            <h2>Empower Your Home</h2>
-            <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
-            <ul>
-                <li>Tide Family of Smart Thermostats</li>
-                <li>Aspen Family of Zigbee Sensors</li>
-                <li>OFA Smart Control Pro (URC 7966)</li>
-                <!-- More items here -->
-            </ul>
-            <p>More to come soon…</p>
-            <p>Powered by <a href="https://nevo.ai">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com">QuickSet Cloud</a>.</p>
-        </div>
+    <div class="description">
+        <!-- Description Content -->
+        <h2>Empower Your Home</h2>
+        <p>Our app is designed to make life easier for users of all skill levels, with tailored guides and troubleshooting for popular issues. We’re working hard to expand our list of supported devices which today includes:</p>
+        <!-- List of supported devices -->
+        <p>More to come soon…</p>
+        <p>Powered by <a href="https://nevo.ai">nevo.ai</a> and supercharged with <a href="https://quicksetcloud.com">QuickSet Cloud</a>.</p>
     </div>
 
     <div class="footer">
@@ -151,5 +128,4 @@
 
         setInterval(cycleImages, 3000);
     </script>
-</body>
-</html>
+</body
